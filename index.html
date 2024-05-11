@@ -100,24 +100,61 @@ p, h1, h2, h3, h4, h5, h6 {
     Make them display as inline block, instead of block.
     This will cause them to render on the same line.
     You can consolidate this rule with the one on step. 4 */
+    .Bdiv {
+      display: inline-block;
+    }
 
     /* 👉 Task 9- Target the "Compose" button, although note it's a div instead an actual button.
     Give it color, bold text, background, padding, border radius, margin right, and a cursor of pointer. */
+    #compB {
+      color: red;
+      font-weight: bold;
+      background-color: pink;
+      padding: 6px;
+      border-radius: 3px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
 
     /* 👉 Task 10- Research how to remove all the default styling of button elements.
     Target the button elements inside the element with id headerBottom.
     Remove all their styling, give them a bit of margin to the right, and a cursor of pointer. */
+    .buttons, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    }
+    .buttons {
+      margin-right: 5px;
+      cursor: pointer;
+    }
 
     /* 👉 Task 11- Target the button element inside the id headerBottom that has a class of active
     Make the font weight be bolder, and add a bottom border of 2 pixels solid color (you choose the color).
     Add the class name to the "All mail" button. */
+    #active {
+      font-weight: bolder;
+      border-bottom: 2px solid red;
+    }
 
     /* 👉 Task 12- Target all divs directly nested inside elements with a class of email,
     and make them display as inline-block elements.
     This will make each email render all its details in the same line*/
+    .email-check, .email-name, .email-subject, .email-date, .email-size {
+      display: inline-block;
+    }
 
     /* 👉 Task 13- Target the elements with a class of email.
     Give them some padding, bigger padding to the left, and a bottom border of very light grey. */
+    .email {
+      padding: 5px;
+      padding-left: 10px;
+      border-bottom: lightgrey
+    }
 
     /* 👉 Task 14- Target each div inside the element with a class of email.
     Make the email author and the email subject take 35% of the width of the parent element.
@@ -153,12 +190,12 @@ p, h1, h2, h3, h4, h5, h6 {
         </div>
       </div>
       <div id="headerBottom">
-        <div>Compose</div>
-        <div>
-          <button>All mail</button>
-          <button>Unread</button>
-          <button>Pinned</button>
-          <button>VIPs</button>
+        <div class="Bdiv" id="compB">Compose</div>
+        <div class="Bdiv">
+          <button class="buttons" id="active">All mail</button>
+          <button class="buttons">Unread</button>
+          <button class="buttons">Pinned</button>
+          <button class="buttons">VIPs</button>
         </div>
       </div>
     </header>
