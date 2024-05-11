@@ -56,23 +56,45 @@ p, h1, h2, h3, h4, h5, h6 {
     /* 👉 Task 2- Target the body element.
     Apply a font family of Arial to the body element.
     The font property is inherited by descendant (nested) elements. */
+    body {
+      font-family: Arial;
+    }
 
     /* 👉 Task 3- Target the element with id headerTop.
     Apply white color to the text, some padding using px or rem units, and a dark background color. */
+    #headerTop {
+      color: white;
+      padding: 5px;
+      background-color: darkgray
+    }
 
     /* 👉 Task 4- Target the divs that are directly nested underneath the id headerTop.
     Make them display as inline block, instead of block.
     This will make them render on the same line. */
-
+    .inlineer {
+      display: inline-block;
+    }
+ 
     /* 👉 Task 5- Target the spans that are nested inside the id headerTop.
     Make them have some margin on the right.
     This will prevent the spans from crashing against one another. */
+    .spann {
+      margin-right: 5px;
+    }
 
     /* 👉 Task 6- Target the first span nested inside the element with id headerTop.
     Make it have a font weight of bold, and transform the text to uppercase. */
+    #superspan {
+      font-weight: bold;
+      transform: uppercase;
+    }
 
     /* 👉 Task 7- Target the id headerBottom.
     Give it a bottom border of 1 pixel, solid gray, and a little bit of padding using px or rem units. */
+    #headerBottom {
+      border-bottom: 1px gray;
+      padding: 5px
+    }
 
     /* 👉 Task 8- Target the divs that are nested directly inside the element with id headerBottom.
     Make them display as inline block, instead of block.
@@ -122,11 +144,11 @@ p, h1, h2, h3, h4, h5, h6 {
   <div>
     <header>
       <div id="headerTop">
-        <div>
-          <span>Super Mail</span>
-          <span>Jess</span>
+        <div class="inlineer">
+          <span class="spann" id="superspan">Super Mail</span>
+          <span class="spann">Jess</span>
         </div>
-        <div>
+        <div class="inlineer">
           <input type="text" placeholder="Search Mail" />
         </div>
       </div>
